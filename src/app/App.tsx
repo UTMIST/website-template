@@ -1,21 +1,26 @@
 import * as React from 'react';
 import {ChakraProvider} from '@chakra-ui/react';
 import theme from '../config/theme';
-import Header from '../sections/Header';
-import AboutUs from '../sections/AboutUs';
-import Navigation from '../sections/Navigation';
-import Footer from '../sections/Footer';
 import '../style/override.css';
 import '@fontsource/raleway/400.css';
 import '@fontsource/open-sans/700.css';
+import MainPage from "../pages/MainPage";
+import TeamPage from "../pages/TeamPage";
+import DesignPage from "../pages/DesignPage";
+import DemoPage from "../pages/DemoPage";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 
 const App = () => {
     return (
         <ChakraProvider theme={theme}>
-            <Navigation/>
-            <Header/>
-            <AboutUs/>
-            <Footer/>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<MainPage/>}/>
+                    <Route path="/team" element={<TeamPage/>}/>
+                    <Route path="/design" element={<DesignPage/>}/>
+                    <Route path="/demo" element={<DemoPage/>}/>
+                </Routes>
+            </Router>
         </ChakraProvider>
     );
 };

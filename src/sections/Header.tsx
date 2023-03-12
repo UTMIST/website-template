@@ -9,10 +9,10 @@ const Component = () => (
             textAlign={'center'}
             spacing={{base: 8, md: 14}}
             py={{base: 20, md: 36}}
-            style={{paddingTop: '200px', paddingBottom: '200px'}}>
+            style={{paddingTop: '150px', paddingBottom: '80px'}}>
             <Heading
                 color={'white'}
-                fontSize={{base: '4xl'}}
+                fontSize={{base: '8xl'}}
                 style={{marginTop: '0px'}}>
                 AloeML
             </Heading>

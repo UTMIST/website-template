@@ -9,19 +9,18 @@ import {
     Icon,
     IconButton,
     Image,
-    Link,
     Popover,
     PopoverContent,
     PopoverTrigger,
     Stack,
     Text,
-    useBreakpointValue,
     useColorModeValue,
     useDisclosure,
 } from '@chakra-ui/react';
 import {ChevronDownIcon, ChevronRightIcon, CloseIcon, HamburgerIcon,} from '@chakra-ui/icons';
 import logo from '../img/logo.png'
 import {useEffect, useState} from "react";
+import {Link} from 'react-router-dom';
 
 const Navbar = () => {
     const {isOpen, onToggle} = useDisclosure();
@@ -79,8 +78,7 @@ const Navbar = () => {
                 <Flex flex={{base: 1}} justify={{base: 'center', md: 'start'}} display={{base: 'none', md: 'flex'}}
                       style={{marginLeft: '50px', marginRight: '50px'}}>
                     <Link
-                        href='#'
-                        textAlign={useBreakpointValue({base: 'center', md: 'left'})}
+                        to='/'
                         fontFamily={'heading'}
                         color={textColor}>
                         <Image src={logo} className="logo"/>
@@ -141,7 +139,7 @@ const DesktopNav = ({navbarDocked}: { navbarDocked: boolean }) => {
                         <PopoverTrigger>
                             <Link
                                 p={2}
-                                href={navItem.href ?? '#'}
+                                to={navItem.href ?? '#'}
                                 fontSize={'sm'}
                                 fontWeight={500}
                                 color={linkColor}
@@ -178,7 +176,7 @@ const DesktopNav = ({navbarDocked}: { navbarDocked: boolean }) => {
 const DesktopSubNav = ({label, href, subLabel}: NavItem) => {
     return (
         <Link
-            href={href}
+            to={href}
             role={'group'}
             display={'block'}
             p={2}
@@ -231,7 +229,7 @@ const MobileNavItem = ({navItem, toggleParent}: { navItem: NavItem, toggleParent
             <Flex
                 py={2}
                 as={Link}
-                href={href ?? '#'}
+                to={href ?? '#'}
                 justify={'space-between'}
                 align={'center'}
                 _hover={{
@@ -264,7 +262,7 @@ const MobileNavItem = ({navItem, toggleParent}: { navItem: NavItem, toggleParent
                     align={'start'}>
                     {children &&
                         children.map((child) => (
-                            <Link key={child.label} py={2} href={child.href}>
+                            <Link key={child.label} py={2} to={child.href}>
                                 {child.label}
                             </Link>
                         ))}
@@ -284,7 +282,7 @@ interface NavItem {
 const NAV_ITEMS: Array<NavItem> = [
     {
         label: 'About Us',
-        href: '#about-us'
+        href: '/'
     },
     {
         label: 'Team',
