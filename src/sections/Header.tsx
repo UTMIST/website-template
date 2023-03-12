@@ -1,6 +1,7 @@
 import * as React from 'react';
-import {Container, Stack, Box, Heading, Button, Image, Center} from '@chakra-ui/react'
+import {Box, Button, Center, Container, Heading, Image, Stack} from '@chakra-ui/react'
 import headerLogo from '../img/logo.png';
+
 const Component = () => (
     <Container maxW={'3xl'}>
         <Stack
@@ -15,16 +16,17 @@ const Component = () => (
                 style={{marginTop: '0px'}}>
                 AloeML
             </Heading>
-     
+
             <Center>
                 <Image src={headerLogo} className="headerlogo"/>
             </Center>
-           
+
             <Heading
                 color={'white'}
                 fontSize={{base: '1xl'}}
                 style={{marginTop: '40px'}}>
-                Leveraging Big Data&trade;, Machine Learning&trade;, and Blockchain&trade; to optimize Aloe growth&trade;
+                Leveraging Big Data&trade;, Machine Learning&trade;, and Blockchain&trade; to optimize Aloe
+                growth&trade;
             </Heading>
             <Stack
                 style={{marginTop: "40px"}}

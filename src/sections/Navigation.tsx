@@ -4,26 +4,22 @@
 
 import {
     Box,
-    Flex,
-    Text,
-    IconButton,
-    Stack,
     Collapse,
+    Flex,
     Icon,
+    IconButton,
+    Image,
     Link,
     Popover,
-    PopoverTrigger,
     PopoverContent,
-    useColorModeValue,
+    PopoverTrigger,
+    Stack,
+    Text,
     useBreakpointValue,
-    useDisclosure, Image,
+    useColorModeValue,
+    useDisclosure,
 } from '@chakra-ui/react';
-import {
-    HamburgerIcon,
-    CloseIcon,
-    ChevronDownIcon,
-    ChevronRightIcon,
-} from '@chakra-ui/icons';
+import {ChevronDownIcon, ChevronRightIcon, CloseIcon, HamburgerIcon,} from '@chakra-ui/icons';
 import logo from '../img/logo.png'
 import {useEffect, useState} from "react";
 

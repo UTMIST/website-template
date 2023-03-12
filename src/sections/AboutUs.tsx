@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {Container, Grid, GridItem, Heading, Stack, Box, Image, Text, Show, Hide} from '@chakra-ui/react'
+import {Box, Container, Heading, Stack, Text} from '@chakra-ui/react'
 
 const Component = () => (
     <Container id="about-us" maxW={'3xl'}>

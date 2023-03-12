@@ -1,14 +1,5 @@
 import * as React from 'react';
-import {
-    Box,
-    Container,
-    Link,
-    Flex,
-    Text,
-    Center,
-    VStack,
-    Image
-} from '@chakra-ui/react';
+import {Box, Center, Container, Flex, Image, Link, Text, VStack} from '@chakra-ui/react';
 import logo from '../img/logo.png';
 
 const Footer = () => {
@@ -21,14 +12,14 @@ const Footer = () => {
                 <Flex direction={['column', 'row']}>
                     <Center>
                         <Link href="#">
-                            <Image src={logo} className="headerlogo" />
+                            <Image src={logo} className="headerlogo"/>
                         </Link>
                     </Center>
                     <Center
-                        mt={{ base: 8, md: 3 }}
-                        pl={{ base: 5, sm: 10 }}
-                        pr={{ base: 5, sm: 0 }} 
-                        textAlign={{ base: 'center', sm: 'left' }}
+                        mt={{base: 8, md: 3}}
+                        pl={{base: 5, sm: 10}}
+                        pr={{base: 5, sm: 0}}
+                        textAlign={{base: 'center', sm: 'left'}}
                     >
                         <VStack align={'left'}>
                             <Text>
@@ -37,7 +28,7 @@ const Footer = () => {
                                     href="https://utmist.gitlab.io"
                                     textDecor={'underline'}
                                     isExternal
-                                    _hover={{ color: 'blue.600' }}
+                                    _hover={{color: 'blue.600'}}
                                     transition={'0.25s'}
                                 >
                                     University of Toronto Machine Intelligence Student Team

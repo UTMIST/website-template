@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { ChakraProvider } from '@chakra-ui/react';
+import {ChakraProvider} from '@chakra-ui/react';
 import theme from '../config/theme';
 import Header from '../sections/Header';
 import AboutUs from '../sections/AboutUs';
@@ -12,10 +12,10 @@ import '@fontsource/open-sans/700.css';
 const App = () => {
     return (
         <ChakraProvider theme={theme}>
-            <Navigation />
-            <Header />
-            <AboutUs />
-            <Footer />
+            <Navigation/>
+            <Header/>
+            <AboutUs/>
+            <Footer/>
         </ChakraProvider>
     );
 };
