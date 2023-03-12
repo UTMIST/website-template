@@ -3,12 +3,8 @@ import { ChakraProvider } from '@chakra-ui/react';
 import theme from '../config/theme';
 import Header from '../sections/Header';
 import AboutUs from '../sections/AboutUs';
-import Schedule from '../sections/Schedule';
 import Navigation from '../sections/Navigation';
 import Footer from '../sections/Footer';
-import Contact from '../sections/Contact';
-import Sponsors from '../sections/Sponsors';
-import FAQ from '../sections/FAQ';
 import '../style/override.css';
 import '@fontsource/raleway/400.css';
 import '@fontsource/open-sans/700.css';
@@ -19,10 +15,6 @@ const App = () => {
             <Navigation />
             <Header />
             <AboutUs />
-            <Schedule />
-            <Sponsors />
-            <FAQ />
-            <Contact />
             <Footer />
         </ChakraProvider>
     );

@@ -24,7 +24,7 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
 } from '@chakra-ui/icons';
-import logo from '../img/logo.svg'
+import logo from '../img/logo.png'
 import {useEffect, useState} from "react";
 
 const Navbar = () => {
@@ -87,7 +87,7 @@ const Navbar = () => {
                         textAlign={useBreakpointValue({base: 'center', md: 'left'})}
                         fontFamily={'heading'}
                         color={textColor}>
-                        <Image src={logo}/>
+                        <Image src={logo} className="logo"/>
                     </Link>
 
                     <Flex display={{base: 'none', md: 'flex'}} ml={10}
@@ -291,20 +291,16 @@ const NAV_ITEMS: Array<NavItem> = [
         href: '#about-us'
     },
     {
-        label: 'Schedule',
-        href: '#schedule'
+        label: 'Team',
+        href: '/team'
     },
     {
-        label: 'Sponsors',
-        href: '#sponsors'
+        label: 'Design',
+        href: '/design'
     },
     {
-        label: 'FAQ',
-        href: '#faq'
-    },
-    {
-        label: 'Contact Us',
-        href: '#contact-us'
+        label: 'Demo',
+        href: '/demo'
     },
 ];
 

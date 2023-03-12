@@ -9,12 +9,13 @@ import {
     VStack,
     Image
 } from '@chakra-ui/react';
-import logo from '../img/logo.svg';
+import logo from '../img/logo.png';
 
 const Footer = () => {
     return (
         <Box
             bg={'#000'}
+            mt={{base: 20, md: 28}}
         >
             <Container maxW={'3xl'} py={10}>
                 <Flex direction={['column', 'row']}>
@@ -31,7 +32,7 @@ const Footer = () => {
                     >
                         <VStack align={'left'}>
                             <Text>
-                                Presented by the&nbsp;
+                                AloeML<br/>
                                 <Link
                                     href="https://utmist.gitlab.io"
                                     textDecor={'underline'}
@@ -41,17 +42,6 @@ const Footer = () => {
                                 >
                                     University of Toronto Machine Intelligence Student Team
                                 </Link>
-                            </Text>
-                            <Text>
-                                <Link
-                                    href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
-                                    textDecor={'underline'}
-                                    isExternal
-                                    _hover={{ color: 'blue.600' }}
-                                    transition={'0.25s'}
-                                >
-                                    MLH Code of Conduct
-                                </Link> | © { new Date().getFullYear() } UTMIST
                             </Text>
                         </VStack>
                     </Center>

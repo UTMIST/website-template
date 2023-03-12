@@ -1,17 +1,8 @@
 import * as React from 'react';
 import {Container, Grid, GridItem, Heading, Stack, Box, Image, Text, Show, Hide} from '@chakra-ui/react'
-import boredPeople from '../img/bored_people.jpeg';
-import speaker from '../img/speaker.jpg';
-import blueBlob from '../img/blue_blob.svg';
-import redBlob from '../img/red_blob.svg';
 
 const Component = () => (
     <Container id="about-us" maxW={'3xl'}>
-        <div className='backgroundGraphicParent'>
-            <Image src={blueBlob} className="backgroundGraphic pulse" style={{left: '-20%'}}/>
-            <Image src={redBlob} className="backgroundGraphic pulse" style={{right: '-20%', marginTop: '300px'}}/>
-        </div>
-
         <Stack
             as={Box}
             spacing={{base: 8, md: 14}}
@@ -19,57 +10,24 @@ const Component = () => (
             <Heading className="heading">About Us</Heading>
 
             <Text>
-                Hack the MIST is the first hackathon at the University of Toronto
-                that <b>focuses on developing an end to end solution on real world
-                problems with machine learning</b>.
+                AloeML is a blockchain-based platform that uses machine learning and big data to optimize aloe growth.
+                It securely stores and manages data using distributed ledgers, ensuring that information is
+                tamper-proof.
             </Text>
-            <Grid templateColumns={{
-                base: 'repeat(1, 1fr)',
-                md: 'repeat(2, 1fr)'
-            }} gap={6}>
-                <Hide breakpoint='(max-width: 767px)'>
-                    <GridItem w='100%'>
-                        <Image src={boredPeople} className="outline zoom circle"/>
-                    </GridItem>
-                </Hide>
-
-                <GridItem w='100%'>
-                    <Box className="spacer"/>
-                    <Text className="verticalCenter">
-                        The solutions from this hackathon
-                        will be more than coding in a Jupyter notebook, but will instead
-                        be solutions that can be implemented in the real world.
-                    </Text>
-                </GridItem>
-
-                <GridItem w='100%'>
-                    <Box className="spacer"/>
-                    <Text className="verticalCenter">
-                        This will be an all-inclusive hackathon where we invite hackers
-                        from all backgrounds. Our goal is to educate ML developers on
-                        building full ML pipelines for real-world applications, which is
-                        not something that is taught in university courses.
-                    </Text>
-                </GridItem>
-                <Hide breakpoint='(max-width: 767px)'>
-                    <GridItem w='100%'>
-                        <Image src={speaker} className="outline zoom circle"/>
-                    </GridItem>
-                </Hide>
-            </Grid>
-
             <Text>
-                This will make
-                an impact as we will bring solutions developed by some of the
-                brightest minds to difficult problems.
+                By combining blockchain and machine learning, AloeML analyzes data from sensors and IoT devices
+                to predict growth trends. Growers can make informed decisions and improve cultivation processes
+                to increase yields and improve crop quality.
             </Text>
-
-
-            <Show breakpoint='(max-width: 767px)'>
-                <GridItem w='100%'>
-                    <Image src={speaker} className="outline zoom circle"/>
-                </GridItem>
-            </Show>
+            <Text>
+                AloeML includes tools such as automated irrigation systems and nutrient management systems to
+                provide precise care for each plant. This ensures that plants receive the optimal level of
+                nutrients and water to grow and thrive.
+            </Text>
+            <Text>
+                With AloeML, growers can optimize their cultivation processes and increase yields, crop quality, and
+                profits. Sign up for AloeML today and grow your best aloe crop yet!
+            </Text>
         </Stack>
     </Container>
 );
